@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.lang.reflect.Field;
 import static org.junit.jupiter.api.Assertions.*;
 
-class SoldierTest {
+class SoldierTest
+{
     int strength = 150;
     int health = 300;
 
