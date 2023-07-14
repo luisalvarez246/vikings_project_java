@@ -55,6 +55,15 @@ public class War
         return (Vikings.getMsg());
     }
 
+    public static String showStatus()
+    {
+        if (saxonArmy.size() == 0)
+            return ("Vikings have won the war of the century!");
+        else if (vikingArmy.size() == 0)
+            return ("Saxons have fought for their lives and survive another day...");
+        return ("Vikings and Saxons are still in the thick of battle.");
+    }
+
     public static ArrayList getVikingArmy()
     {
         return (vikingArmy);

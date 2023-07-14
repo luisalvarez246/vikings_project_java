@@ -147,4 +147,31 @@ class WarTest
         String response = War.saxonAttack();
         assertEquals(Vikings.getName() + " has received " + saxon.getStrength() + " points of damage", response);
     }
+
+    @Test
+    public void showStatus_should_return_Vikings_have_won_the_war_of_the_century()
+    {
+        //arrange, act
+        War.addViking(viking);
+        //assert
+        assertEquals("Vikings have won the war of the century!", War.showStatus());
+    }
+
+    @Test
+    public void showStatus_should_return_Saxons_have_fought_for_their_lives_and_survive_another_day()
+    {
+        //arrange, act
+        War.addSaxon(saxon);
+        //assert
+        assertEquals("Saxons have fought for their lives and survive another day...", War.showStatus());
+    }
+    @Test
+    public void showStatus_should_return_Vikings_and_Saxons_are_still_in_the_thick_of_battle()
+    {
+        //arrange, act
+        War.addSaxon(saxon);
+        War.addViking(viking);
+        //assert
+        assertEquals("Vikings and Saxons are still in the thick of battle.", War.showStatus());
+    }
 }
